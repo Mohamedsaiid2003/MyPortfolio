@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2.5 rounded-full font-medium shadow-lg hover:shadow-purple-500/50 transition-all duration-300 text-sm;
+  }
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-white opacity-0 hover:opacity-20 transition-opacity duration-300;
+  }
+  .btn-outline {
+    @apply border-2 border-purple-500 text-purple-400 px-6 py-2.5 rounded-full font-medium hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm;
+  }
+  .card {
+    @apply relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-500 shadow-xl hover:shadow-purple-500/20;
+  }
+  .section-title {
+    @apply text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-lg;
+  }
+  .glow {
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.7), 0 0 100px rgba(139, 92, 246, 0.4);
+}
+}
