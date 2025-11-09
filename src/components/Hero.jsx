@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, FileText, Download, X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Hero({ darkMode }) {
+export default function Hero() {
   const [isCVOpen, setIsCVOpen] = useState(false);
 
   return (
@@ -15,15 +15,15 @@ export default function Hero({ darkMode }) {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <h1 className={`text-5xl md:text-7xl font-bold mb-6 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gray-900 dark:text-white">
               BACKEND
               <span className="block text-4xl md:text-6xl bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 JAVA DEVELOPER
               </span>
             </h1>
 
-            <p className={`text-lg mb-8 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                <strong>  I build powerful and secure backend systems using Spring Boot, with PostgreSQL databases, and deploy them on the cloud.</strong>
+            <p className="text-lg mb-8 leading-relaxed text-gray-700 dark:text-gray-300">
+              <strong>I build powerful and secure backend systems using Spring Boot, with PostgreSQL databases, and deploy them on the cloud.</strong>
             </p>
 
             {/* الأزرار */}
@@ -46,15 +46,30 @@ export default function Hero({ darkMode }) {
               <a href="#contact" className="btn-outline">Contact</a>
             </div>
 
-            {/* السوشيال ميديا → صفحة جديدة */}
+            {/* السوشيال ميديا */}
             <div className="flex gap-6 mt-8">
-              <a href="https://github.com/Mohamedsaiid2003" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-purple-400' : 'text-indigo-600'} hover:opacity-80 transition`}>
+              <a 
+                href="https://github.com/Mohamedsaiid2003" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-indigo-600 dark:text-purple-400 hover:opacity-80 transition"
+              >
                 <Github size={28} />
               </a>
-              <a href="https://www.linkedin.com/in/mohamed-saeed-2343ba318/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-purple-400' : 'text-indigo-600'} hover:opacity-80 transition`}>
+              <a 
+                href="https://www.linkedin.com/in/mohamed-saeed-2343ba318/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-indigo-600 dark:text-purple-400 hover:opacity-80 transition"
+              >
                 <Linkedin size={28} />
               </a>
-              <a href="mohamed1292003@hotmail.com" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-purple-400' : 'text-indigo-600'} hover:opacity-80 transition`}>
+              <a 
+                href="mailto:mohamed1292003@hotmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-indigo-600 dark:text-purple-400 hover:opacity-80 transition"
+              >
                 <Mail size={28} />
               </a>
             </div>
@@ -69,8 +84,12 @@ export default function Hero({ darkMode }) {
             className="relative flex justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur-3xl opacity-40 animate-pulse"></div>
-            <div className="relative w-96 h-96 rounded-full overflow-hidden border-[14px] border-purple-500/60 shadow-2xl glow">
-              <img src="public/images/تم تعديل - E0D4BADD-6073-4314-AC12-4A8AEFA5DEAA_1_105_c-artguru.jpeg" alt="Mohamed Saiid" className="w-full h-full object-cover" />
+            <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-[14px] border-purple-500/60 shadow-2xl glow">
+              <img 
+                src="/images/E0D4BADD-6073-4314-AC12-4A8AEFA5DEAA_1_105_c-artguru.jpeg" 
+                alt="Mohamed Saiid" 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </motion.div>
         </div>
@@ -98,20 +117,20 @@ export default function Hero({ darkMode }) {
               className="fixed inset-4 md:inset-8 z-50 flex flex-col bg-white dark:bg-gray-900 rounded-3xl shadow-2xl overflow-hidden"
             >
               {/* Header */}
-              <div className="flex justify-between items-center p-4 border-b dark:border-gray-700">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">السيرة الذاتية - محمد سعيد</h3>
+              <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">View CV</h3>
                 <div className="flex gap-2">
                   <a
                     href="/cv/Mohamed_Saiid_CV.pdf"
                     download
-                    className="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-600 transition"
-                    title="تحميل"
+                    className="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-600 dark:text-green-400 transition"
+                    title="Download"
                   >
                     <Download size={20} />
                   </a>
                   <button
                     onClick={() => setIsCVOpen(false)}
-                    className="p-2 rounded-full bg-red-500/10 hover:bg-red-500/20 text-red-600 transition"
+                    className="p-2 rounded-full bg-red-500/10 hover:bg-red-500/20 text-red-600 dark:text-red-400 transition"
                   >
                     <X size={20} />
                   </button>
@@ -121,15 +140,10 @@ export default function Hero({ darkMode }) {
               {/* PDF Viewer */}
               <div className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-800 p-2">
                 <iframe
-                  src="public/CV.pdf"
+                  src="/CV.pdf"
                   className="w-full h-full rounded-xl border-0"
                   title="CV"
                 />
-              </div>
-
-              {/* Footer */}
-              <div className="p-4 border-t dark:border-gray-700 text-center text-sm text-gray-600 dark:text-gray-400">
-                اضغط خارج النافذة أو على X للإغلاق
               </div>
             </motion.div>
           </>
