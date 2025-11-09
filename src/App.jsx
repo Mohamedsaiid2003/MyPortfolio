@@ -7,6 +7,7 @@ import Services from './components/Services';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import SEO from './components/SEO';
 
 const Reveal = ({ children, delay = 0 }) => (
   <motion.div
@@ -43,7 +44,9 @@ function App() {
   if (loading) return <Loading />;
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark' : ''}`}>
+    <div className="min-h-screen transition-colors duration-500">
+      <SEO />
+      
       <div className={`min-h-screen ${darkMode ? 'bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900' : 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50'} text-white dark:text-white`}>
         
         {/* Navbar صغير ومركز في النص */}
@@ -70,11 +73,11 @@ function App() {
         {/* Content */}
         <AnimatePresence mode="wait">
           <motion.div key="content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="pt-20">
-            <Reveal><Hero darkMode={darkMode} /></Reveal>
-            <Reveal delay={0.2}><Services darkMode={darkMode} /></Reveal>
-            <Reveal delay={0.3}><Skills darkMode={darkMode} /></Reveal>
-            <Reveal delay={0.4}><Projects darkMode={darkMode} /></Reveal>
-            <Reveal delay={0.5}><Contact darkMode={darkMode} /></Reveal>
+            <Reveal><Hero /></Reveal>
+            <Reveal delay={0.2}><Services /></Reveal>
+            <Reveal delay={0.3}><Skills /></Reveal>
+            <Reveal delay={0.4}><Projects /></Reveal>
+            <Reveal delay={0.5}><Contact /></Reveal>
           </motion.div>
         </AnimatePresence>
       </div>
