@@ -121,7 +121,7 @@ export default function Hero() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">View CV</h3>
                 <div className="flex gap-2">
                   <a
-                    href="/cv/Mohamed_Saiid_CV.pdf"
+                    href="/images/CV.pdf"
                     download
                     className="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-600 dark:text-green-400 transition"
                     title="Download"
@@ -140,7 +140,7 @@ export default function Hero() {
               {/* PDF Viewer */}
               <div className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-800 p-2">
                 <iframe
-                  src="/public/images/CV.pdf"
+                  src="/images/CV.pdf"
                   className="w-full h-full rounded-xl border-0"
                   title="CV"
                 />
