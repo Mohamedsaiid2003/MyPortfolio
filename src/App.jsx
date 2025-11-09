@@ -7,7 +7,6 @@ import Services from './components/Services';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import SEO from './components/SEO';
 
 const Reveal = ({ children, delay = 0 }) => (
   <motion.div
@@ -45,7 +44,6 @@ function App() {
 
   return (
     <div className="min-h-screen transition-colors duration-500">
-      <SEO />
       
       <div className={`min-h-screen ${darkMode ? 'bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900' : 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50'} text-white dark:text-white`}>
         
