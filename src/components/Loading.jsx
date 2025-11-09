@@ -32,17 +32,17 @@ export default function Loading() {
       transition={{ duration: 0.8 }}
     >
       <motion.div
-        className="text-center"
+        className="text-center px-4"
         variants={container}
         initial="hidden"
         animate="visible"
       >
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-4 flex-wrap">
           {letters.map((letter, index) => (
             <motion.span
               key={index}
               variants={child}
-              className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
               style={{ display: 'inline-block' }}
             >
               {letter === ' ' ? '\u00A0' : letter}
@@ -53,7 +53,7 @@ export default function Loading() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="text-purple-300 text-lg tracking-wider"
+          className="text-purple-300 text-base sm:text-lg md:text-xl tracking-wider mt-4"
         >
           &lt;Backend Java Developer/&gt;
         </motion.p>

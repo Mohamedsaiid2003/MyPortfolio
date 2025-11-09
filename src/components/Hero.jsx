@@ -140,7 +140,7 @@ export default function Hero() {
               {/* PDF Viewer */}
               <div className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-800 p-2">
                 <iframe
-                  src="/CV.pdf"
+                  src="/public/images/CV.pdf"
                   className="w-full h-full rounded-xl border-0"
                   title="CV"
                 />
