@@ -15,13 +15,14 @@ export default function Services() {
           <div className="card">
             <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Database Design</h3>
             <p className="text-gray-700 dark:text-gray-300 text-lg">PostgreSQL</p>
+             <p className="text-gray-700 dark:text-gray-300 text-lg">MySQL</p>
           </div>
 
           {/* Cloud Deployment */}
-          <div className="card">
+         {/* <div className="card">
             <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Cloud Deployment</h3>
             <p className="text-gray-700 dark:text-gray-300 text-lg">Render, Railway</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
