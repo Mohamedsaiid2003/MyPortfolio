@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="section-title">Contact Me</h2>
         <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
-          لو عايز مشروع باك-إند أو أي خدمة برمجة، كلمني على الواتساب دلوقتي!
+          If you want a back-end project, contact me.
         </p>
         
         {/* غيّر الرقم ده برقمك انت بصيغة دولية بدون + أو 00 أو مسافات */}
